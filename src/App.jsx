@@ -1,20 +1,26 @@
 import { useState } from 'react'
-
-
+import Btn from './components/Btn';
 function App() {
   const [color, setColor] = useState("olive");
-
+  const changeColor = (newColor) => {
+    setColor(newColor);
+  };
   return (
     <>
     <div className='w-full h-screen duration-200' style={{ backgroundColor: color }}>
     <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2 '>
-    <div className='flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-full '>
-    <button onClick={()=>setColor("red")} className='text-white p-2 rounded-full shadow-lg border-white' style={{backgroundColor:"red"}}>Red</button>
-    <button onClick={()=>setColor("blue")} className='text-white p-2 rounded-full shadow-lg border-white' style={{backgroundColor:"blue"}}>blue</button>
-    <button onClick={()=>setColor("orange")} className='text-white p-2 rounded-full shadow-lg border-white' style={{backgroundColor:"orange"}}>orange</button>
-    <button onClick={()=>setColor("purple")} className='text-white p-2 rounded-full shadow-lg border-white' style={{backgroundColor:"purple"}}>purple</button>
-    <button onClick={()=>setColor("gray")} className='text-white p-2 rounded-full shadow-lg border-white' style={{backgroundColor:"gray"}}>gray</button>
-    <button onClick={()=>setColor("pink")} className='text-white p-2 rounded-full shadow-lg border-white' style={{backgroundColor:"pink"}}>pink</button>
+    
+     <div className='flex flex-wrap justify-center gap-6 shadow-lg bg-white px-3 py-2 rounded-full '>
+    <Btn colors ="red" onClick={changeColor}/>
+    <Btn colors ="blue" onClick={changeColor}/>
+    <Btn colors ="purple" onClick={changeColor}/>
+    <Btn colors ="gray" onClick={changeColor}/>
+    <Btn colors ="yellow" onClick={changeColor}/>
+    <Btn colors ="green" onClick={changeColor}/>
+    <Btn colors ="black" onClick={changeColor}/>
+    <Btn colors ="lavender" onClick={changeColor}/>
+    <Btn colors ="pink" onClick={changeColor}/>
+
     </div>
 
     </div>
